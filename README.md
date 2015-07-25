@@ -14,6 +14,7 @@ docker-compose up
 docker-compose -f development.yml build
 docker-compose -f development.yml up
 ```
+
 In development, microservices are built from source + Dockerfiles instead of images.
 Make sure all to have all symbolic links to microservices in /dev_links
 
