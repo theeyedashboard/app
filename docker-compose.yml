@@ -1,0 +1,9 @@
+datasourcemanager:
+  image: theeyedashboard/datasource-manager
+  ports:
+    - "8002:80"
+  links:
+    - mongo
+
+mongo:
+  image: mongo
