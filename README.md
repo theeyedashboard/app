@@ -1,7 +1,9 @@
-# app
-TheEyeDashboard application (Docker-compose)
+# The Eye Dashboard application
 
-## Build and run TheEyeDashboard app
+## Build and run the app with Docker
+
+This is the main app microservice.
+It orchestrates all other microservices.
 
 ```bash
 docker-compose build
