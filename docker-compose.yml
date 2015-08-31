@@ -1,9 +1,25 @@
 datasourcemanager:
-  image: theeyedashboard/datasource-manager
+  build: links/datasource_manager
   ports:
     - "8002:80"
   links:
     - mongo
+  volumes:
+    - links/datasource_manager:/datasource_manager
 
 mongo:
   image: mongo
+
+webui:
+  build: links/webui
+  ports:
+    - "8003:80"
+  volumes:
+    - links/webui:/webui
+
+fetcher:
+  build: links/fetcher
+  ports:
+    - "8004:80"
+  volumes:
+    - links/fetcher:/fetcher
