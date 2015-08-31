@@ -1,5 +1,7 @@
 # The Eye Dashboard application
 
+![ThEyeDashboard](docs/theeye.png)
+
 ## Build and run the app with Docker
 
 This is the main app microservice.
