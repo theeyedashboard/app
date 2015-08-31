@@ -1,11 +1,18 @@
 datasourcemanager:
   build: links/datasource_manager
-  # volumes:
-  #   - datasource_manager:/datasource_manager
   ports:
     - "8002:80"
   links:
     - mongo
+  volumes:
+    - links/datasource_manager:/datasource_manager
 
 mongo:
   image: mongo
+
+webui:
+  build: links/webui
+  ports:
+    - "8003:80"
+  volumes:
+    - links/webui:/webui
