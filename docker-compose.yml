@@ -16,6 +16,8 @@ webui:
     - "8003:80"
   volumes:
     - links/webui:/webui
+  links:
+    - sampler
 
 fetcher:
   build: links/fetcher
@@ -23,3 +25,11 @@ fetcher:
     - "8004:80"
   volumes:
     - links/fetcher:/fetcher
+
+sampler:
+  build: links/sampler
+  ports:
+    - "8005:80"
+  volumes:
+    - links/sampler:/sampler
+  restart: always
